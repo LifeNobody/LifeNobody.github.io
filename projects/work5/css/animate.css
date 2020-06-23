@@ -1,0 +1,242 @@
+/* header动画 */
+.header{
+    transition: all 1s;
+}
+.header_ani_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.header_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+/* 第1屏动画 */
+.screen_1_subtitle,
+.screen_1_title{
+    transition: all 1s;
+}
+.screen_1_title_ani_init{
+    opacity: 0;
+    transform: translate(0,-100%);
+}
+.screen_1_title_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen_1_subtitle_ani_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen_1_subtitle_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+    transition-delay: .8s;
+}
+
+/* 第2屏动画 */
+.rocket,
+.man,
+.wordline,
+.screen_2_subtitle,
+.screen_2_title{
+    transition: all 1s;
+}
+.rocket_ani_init,
+.wordline_ani_init,
+.screen_2_subtitle_ani_init,
+.screen_2_title_ani_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.man_ani_init{
+    opacity: 0;
+    transform: translate(0,0);
+}
+.screen_2_subtitle_ani_done,
+.screen_2_title_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.wordline_ani_done,
+.man_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+    transition-delay: .5s;
+}
+.rocket_ani_done{
+    transition-delay: 1s;
+    animation: screen_2_bounce 1s 1s;
+}
+
+/* 第3屏动画 */
+.desc_img,
+.courses_item,
+.courses,
+.wordline_3,
+.screen_3_subtitle,
+.screen_3_title{
+    transition: all 1s;
+}
+.desc_img_ani_init{
+    transform: scale(.3);
+}
+.courses_item_ani_init,
+.courses_ani_init,
+.wordline_3_ani_init,
+.screen_3_subtitle_ani_init,
+.screen_3_title_ani_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen_3_subtitle_ani_done,
+.screen_3_title_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.desc_img_ani_done{
+    transform: scale(1);
+}
+.wordline_3_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+    transition-delay: .3s;
+}
+.courses_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+    transition-delay: 1s;
+    animation: screen_3_bounce 1s 1s;
+    /* animation: screen_3_bounce_bre 1s infinite .5s; */
+}
+.courses_item5_ani_done,
+.courses_item4_ani_done,
+.courses_item3_ani_done,
+.courses_item2_ani_done,
+.courses_item1_ani_done{
+    animation: screen_3_bounce_bre 1s infinite .5s;
+}
+
+/* 第4屏动画 */
+.screen_4_items,
+.wordline_4,
+.screen_4_subtitle,
+.screen_4_title{
+    transition: all 1s;
+}
+.screen_4_items_ani_init{
+    transform: scale(0);
+}
+.wordline_4_ani_init,
+.screen_4_subtitle_ani_init,
+.screen_4_title_ani_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen_4_items_ani_done{
+    transform: scale(1);
+}
+.screen_4_title_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.screen_4_subtitle_ani_done,
+.wordline_4_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+    transition-delay: 1s;
+}
+
+/* 第5屏动画 */
+.screen_5_bg,
+.wordline_5,
+.screen_5_subtitle,
+.screen_5_title{
+    transition: all 1s;
+}
+.screen_5_bg_ani_init{
+    transform: scale(.3);
+}
+.wordline_5_ani_init,
+.screen_5_subtitle_ani_init,
+.screen_5_title_ani_init{
+    opacity: 0;
+    transform: translate(0,100%);
+}
+.screen_5_bg_ani_done{
+    transform: scale(1);
+}
+.screen_5_subtitle_ani_done,
+.wordline_5_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+    transition-delay: .8s;
+}
+.screen_5_title_ani_done{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+
+/* 帧动画 */
+/* 第二屏小火箭 */
+@keyframes screen_2_bounce{
+    0%{
+        opacity: 0;
+        transform: translate(0,100%);
+    }
+    50%{
+        opacity: 1;
+        transform: translate(0,-10%);
+    }
+    70%{
+        transform: translate(0,10%);
+    }
+    90%{
+        transform: translate(0,-10%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+/* 第三屏 */
+@keyframes screen_3_bounce{
+    0%{
+        opacity: 0;
+        transform: translate(0,100%);
+    }
+    50%{
+        opacity: 1;
+        transform: translate(0,-10%);
+    }
+    70%{
+        transform: translate(0,10%);
+    }
+    90%{
+        transform: translate(0,-10%);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+/* 第三屏呼吸灯 */
+@keyframes screen_3_bounce_bre{
+    0%,100%{
+        opacity: .6;
+		transform: scale3d(1,1,1);
+	}
+	50% {
+        opacity: .3;
+		transform: scale3d(1.05,1.05,1.05);
+    }
+}
+
+
+
+
+
+
+
+
+
