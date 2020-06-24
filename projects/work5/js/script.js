@@ -199,7 +199,7 @@ for (let i = 0; i < navItems.length; i++) {
 // 到达某一高度就切换导航项并播放某屏动画
 window.onscroll = function () {
     var top = document.documentElement.scrollTop;
-    console.log(top);
+    //console.log(top);
     if (top >= 0) {
         playDone('.header');
         playDone('.screen_1');
