@@ -5,15 +5,15 @@
   
   <title>js | LifeNobody</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据类型数据类型基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined 引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：Object、Array、Function null与undefinednull和undefined基本是同义的，只有一些细微">
+  <meta name="description" content="目录   基本数据类型  数据类型null与undefined     基本数据类型数据类型&amp;emsp;&amp;emsp;基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined &amp;emsp;&amp;emsp;引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js">
 <meta property="og:url" content="http://yoursite.com/2020/07/02/js/index.html">
 <meta property="og:site_name" content="LifeNobody">
-<meta property="og:description" content="数据类型数据类型基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined 引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：Object、Array、Function null与undefinednull和undefined基本是同义的，只有一些细微">
+<meta property="og:description" content="目录   基本数据类型  数据类型null与undefined     基本数据类型数据类型&amp;emsp;&amp;emsp;基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined &amp;emsp;&amp;emsp;引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-02T10:13:31.000Z">
-<meta property="article:modified_time" content="2020-07-02T10:32:45.276Z">
+<meta property="article:modified_time" content="2020-07-02T12:54:09.917Z">
 <meta property="article:author" content="冯海争">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -92,17 +92,70 @@
   <h2 class="title">js</h2>
   <p class="sub">7月 2, 2020</p>
   <article class="content">
-    <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="数据类型-1"><a href="#数据类型-1" class="headerlink" title="数据类型"></a>数据类型</h2><p>基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined</p>
-<p>引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：Object、Array、Function</p>
-<h2 id="null与undefined"><a href="#null与undefined" class="headerlink" title="null与undefined"></a>null与undefined</h2><p>null和undefined基本是同义的，只有一些细微的差别。null表示已被定义，定义为“空值”。典型用法是：</p>
-<p>（1） 作为函数的参数，表示该函数的参数不是对象。</p>
-<p>（2） 作为对象原型链的终点。见例3</p>
-<p>undefined表示根本不存在定义，”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：</p>
-<p>（1）变量被声明了，但没有赋值时，就等于undefined。</p>
-<p>（2）调用函数时，应该提供的参数没有提供，该参数等于undefined。</p>
-<p>（3）对象没有赋值的属性，该属性的值为undefined。</p>
-<p>（4）函数没有返回值时，默认返回undefined。见例4</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">e.g<span class="number">.1</span></span><br><span class="line"><span class="literal">null</span>：</span><br><span class="line">Q：有张三这个人吗？</span><br><span class="line">A：有</span><br><span class="line">Q：在哪？</span><br><span class="line">A：死了</span><br><span class="line"><span class="literal">undefined</span>：</span><br><span class="line">Q：有张三这个人吗？</span><br><span class="line">A：没</span><br><span class="line"></span><br><span class="line">e.g<span class="number">.2</span></span><br><span class="line"><span class="literal">null</span>表示房已盖好，没人要的、待售的空房。</span><br><span class="line"><span class="literal">undefined</span>表示连房子都还没盖</span><br><span class="line"></span><br><span class="line">e.g<span class="number">.3</span></span><br><span class="line"><span class="built_in">Object</span>.getPrototypeOf(<span class="built_in">Object</span>.prototype)<span class="comment">// null</span></span><br><span class="line"></span><br><span class="line">e.g<span class="number">.4</span></span><br><span class="line"><span class="keyword">var</span> i;</span><br><span class="line">i <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">x</span>)</span>&#123;<span class="built_in">console</span>.log(x)&#125;</span><br><span class="line">f() <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span>  o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">o.p <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = f();</span><br><span class="line">x <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+    <details>
+<summary>目录</summary>
+
+<blockquote>
+<p><a href="#基本数据类型">基本数据类型</a></p>
+<blockquote>
+<p><a href="#数据类型">数据类型</a><br><a href="#null与undefined">null与undefined</a></p>
+</blockquote>
+</blockquote>
+</details>
+
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>&emsp;&emsp;基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined</p>
+<p>&emsp;&emsp;引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：Object、Array、Function</p>
+<h2 id="null与undefined"><a href="#null与undefined" class="headerlink" title="null与undefined"></a>null与undefined</h2><p>&emsp;&emsp;null 和 undefined 基本是同义的，只有一些细微的差别。null 表示已被定义，定义为“空值”。典型用法是：</p>
+<p>&emsp;&emsp;（1） 作为函数的参数，表示该函数的参数不是对象。</p>
+<p>&emsp;&emsp;（2） 作为对象原型链的终点。见例 3</p>
+<p>&emsp;&emsp;undefined 表示根本不存在定义，”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：</p>
+<p>&emsp;&emsp;（1）变量被声明了，但没有赋值时，就等于 undefined。</p>
+<p>&emsp;&emsp;（2）调用函数时，应该提供的参数没有提供，该参数等于 undefined。</p>
+<p>&emsp;&emsp;（3）对象没有赋值的属性，该属性的值为 undefined。</p>
+<p>&emsp;&emsp;（4）函数没有返回值时，默认返回 undefined。见例 4</p>
+<details>
+<summary>示例</summary>
+
+<pre><code>e.g.1
+null：
+Q：有张三这个人吗？
+A：有
+Q：在哪？
+A：死了
+undefined：
+Q：有张三这个人吗？
+A：没
+
+e.g.2
+null表示房已盖好，没人要的、待售的空房。
+undefined表示连房子都还没盖
+
+e.g.3
+Object.getPrototypeOf(Object.prototype)// null
+
+e.g.4
+var i;
+i // undefined
+function f(x){console.log(x)}
+f(); // undefined
+var  o = new Object();
+o.p // undefined
+var x = f();
+x // undefined</code></pre></details>
+
+<h1 id="js的内置函数"><a href="#js的内置函数" class="headerlink" title="js的内置函数"></a>js的内置函数</h1><p>&emsp;&emsp;抛开环境，一些js的数据封装类对象</p>
+<ul>
+<li>Object</li>
+<li>Array</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Function</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Error</li>
+<li>Math</li>
+</ul>
 
   </article>
   <footer class="f-cf">
