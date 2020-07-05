@@ -2975,7 +2975,7 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-author-item a:hover,
 .links-of-author-item span.exturl:hover {
-  background: var(--body-bg-color);
+  background: #d0d0d0;
   border-radius: 4px;
 }
 .back-to-top {
