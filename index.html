@@ -309,7 +309,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-05 21:12:10" itemprop="dateModified" datetime="2020-07-05T21:12:10+08:00">2020-07-05</time>
+                <time title="修改时间：2020-07-05 21:59:33" itemprop="dateModified" datetime="2020-07-05T21:59:33+08:00">2020-07-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -332,9 +332,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-基本数据类型"><a href="#1-基本数据类型" class="headerlink" title="1.基本数据类型"></a>1.基本数据类型</h1><h2 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1.数据类型"></a>1.1.数据类型</h2><p>基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined</p>
+          <h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>基本类型（值类型），在栈中开辟一块空间给变量，再将值放在变量的内存空间中：String，Number、Bollean、null、undefined</p>
 <p>引用类型，在栈中开辟一块空间给变量，存放数据在堆中的地址，在堆中开辟一块空间存放数据，将数据的地址赋值给变量：Object、Array、Function</p>
-<h2 id="1-2-null与undefined"><a href="#1-2-null与undefined" class="headerlink" title="1.2.null与undefined"></a>1.2.null与undefined</h2><p>null 和 undefined 基本是同义的，只有一些细微的差别。null 表示已被定义，定义为“空值”。典型用法是：<br>（1）作为函数的参数，表示该函数的参数不是对象。<br>（2）作为对象原型链的终点。见例 3</p>
+<h2 id="null与undefined"><a href="#null与undefined" class="headerlink" title="null与undefined"></a>null与undefined</h2><p>null 和 undefined 基本是同义的，只有一些细微的差别。null 表示已被定义，定义为“空值”。典型用法是：<br>（1）作为函数的参数，表示该函数的参数不是对象。<br>（2）作为对象原型链的终点。见例 3</p>
 <p>undefined 表示根本不存在定义，”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：<br>（1）变量被声明了，但没有赋值时，就等于 undefined。<br>（2）调用函数时，应该提供的参数没有提供，该参数等于 undefined。<br>（3）对象没有赋值的属性，该属性的值为 undefined。<br>（4）函数没有返回值时，默认返回 undefined。见例 4</p>
 <details>
 <summary>示例</summary>
@@ -366,7 +366,7 @@ o.p // undefined
 var x = f();
 x // undefined</code></pre></details>
 
-<h1 id="2-js的内置函数"><a href="#2-js的内置函数" class="headerlink" title="2.js的内置函数"></a>2.js的内置函数</h1><p>抛开环境，一些js的数据封装类对象</p>
+<h1 id="js的内置函数"><a href="#js的内置函数" class="headerlink" title="js的内置函数"></a>js的内置函数</h1><p>抛开环境，一些js的数据封装类对象</p>
 <ul>
 <li>Object</li>
 <li>Array</li>
@@ -379,9 +379,9 @@ x // undefined</code></pre></details>
 <li>Error</li>
 <li>Math</li>
 </ul>
-<h1 id="3-原型"><a href="#3-原型" class="headerlink" title="3.原型"></a>3.原型</h1><h2 id="3-1-构造函数new对象的过程"><a href="#3-1-构造函数new对象的过程" class="headerlink" title="3.1.构造函数new对象的过程"></a>3.1.构造函数new对象的过程</h2><p>用new调用构造函数时发生了什么：<br>1.创建一个空的对象<br>2.把构造函数的prototype属性作为空对象的原型<br>3.this赋值为这个空对象<br>4.执行函数<br>5.如果函数没有返回值则默认返回this（返回之前那个空对象）<br>上面第2步非常重要，正是有了原型链，可以达到类似继承的效果。</p>
-<h2 id="3-2-构造函数的语法糖"><a href="#3-2-构造函数的语法糖" class="headerlink" title="3.2.构造函数的语法糖"></a>3.2.构造函数的语法糖</h2><p>var a = {}其实是var a = new Object()的语法糖<br>var a = []其实是var a = new Array()的语法糖<br>function Foo(){…}其实是var Foo = new Function(…)的语法糖</p>
-<h2 id="3-3-原型规则"><a href="#3-3-原型规则" class="headerlink" title="3.3.原型规则"></a>3.3.原型规则</h2><p>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（除了null意外），如例1.<br>所有的引用类型（数组、对象、函数），都有一个<strong>proto</strong>（隐式原型）属性，属性值是一个普通的对象，如例2.<br>所有的函数，都有一个prototype（显示原型）属性，属性值也是一个普通的对象，如例3.<br>所有的引用类型（数组、对象、函数），<strong>proto</strong>属性值指向它的构造函数的prototype属性值，如例4.</p>
+<h1 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h1><h2 id="构造函数new对象的过程"><a href="#构造函数new对象的过程" class="headerlink" title="构造函数new对象的过程"></a>构造函数new对象的过程</h2><p>用new调用构造函数时发生了什么：<br>1.创建一个空的对象<br>2.把构造函数的prototype属性作为空对象的原型<br>3.this赋值为这个空对象<br>4.执行函数<br>5.如果函数没有返回值则默认返回this（返回之前那个空对象）<br>上面第2步非常重要，正是有了原型链，可以达到类似继承的效果。</p>
+<h2 id="构造函数的语法糖"><a href="#构造函数的语法糖" class="headerlink" title="构造函数的语法糖"></a>构造函数的语法糖</h2><p>var a = {}其实是var a = new Object()的语法糖<br>var a = []其实是var a = new Array()的语法糖<br>function Foo(){…}其实是var Foo = new Function(…)的语法糖</p>
+<h2 id="原型规则"><a href="#原型规则" class="headerlink" title="原型规则"></a>原型规则</h2><p>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（除了null意外），如例1.<br>所有的引用类型（数组、对象、函数），都有一个<strong>proto</strong>（隐式原型）属性，属性值是一个普通的对象，如例2.<br>所有的函数，都有一个prototype（显示原型）属性，属性值也是一个普通的对象，如例3.<br>所有的引用类型（数组、对象、函数），<strong>proto</strong>属性值指向它的构造函数的prototype属性值，如例4.</p>
 <details>
 <summary>代码片段</summary>
 
@@ -432,8 +432,8 @@ for (item in f) {
     }
 }</code></pre></details>
 
-<h2 id="3-4-原型链"><a href="#3-4-原型链" class="headerlink" title="3.4.原型链"></a>3.4.原型链</h2><p>接上节例5，在最后加一句f.toString()。<br>因为f本身没有toString()，并且f.<strong>proto</strong>（即Foo.prototype）中也没有toString()，那么就继续去f.<strong>proto</strong>.<strong>proto</strong>中寻找，因为f.<strong>proto</strong>就是一个普通的对象而已。直到找到最上层都没有找到，那么就宣告失败，返回undefined。最上层是什么 ———— Object.prototype.<strong>proto</strong> === null，这是特例，避免死循环。这样一直往上找，会发现是一个链式的结构，所以叫做“原型链”。</p>
-<h2 id="3-5-instanceof与typeof"><a href="#3-5-instanceof与typeof" class="headerlink" title="3.5.instanceof与typeof"></a>3.5.instanceof与typeof</h2><p>判断一个变量是不是某种类型（数组、对象、函数等）用instanceof。<br>例5中，要计算f instanceof Foo是不是正确，就要判断f的原型一层一层往上，能否对应到Foo.prototype。同理，如果要计算f instanceof Object是不是正确，就要判断f的原型一层一层往上，能否对应到Object.prototype。<br>typeof只能粗略判断f是个对象，不能判断属于哪个对象。见例7.</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>接上节例5，在最后加一句f.toString()。<br>因为f本身没有toString()，并且f.<strong>proto</strong>（即Foo.prototype）中也没有toString()，那么就继续去f.<strong>proto</strong>.<strong>proto</strong>中寻找，因为f.<strong>proto</strong>就是一个普通的对象而已。直到找到最上层都没有找到，那么就宣告失败，返回undefined。最上层是什么 ———— Object.prototype.<strong>proto</strong> === null，这是特例，避免死循环。这样一直往上找，会发现是一个链式的结构，所以叫做“原型链”。</p>
+<h2 id="instanceof与typeof"><a href="#instanceof与typeof" class="headerlink" title="instanceof与typeof"></a>instanceof与typeof</h2><p>判断一个变量是不是某种类型（数组、对象、函数等）用instanceof。<br>例5中，要计算f instanceof Foo是不是正确，就要判断f的原型一层一层往上，能否对应到Foo.prototype。同理，如果要计算f instanceof Object是不是正确，就要判断f的原型一层一层往上，能否对应到Object.prototype。<br>typeof只能粗略判断f是个对象，不能判断属于哪个对象。见例7.</p>
 <details>
 <summary>代码片段</summary>
 
@@ -445,8 +445,8 @@ var f = new Foo(&apos;zhangsan&apos;)
 console.log(typeof f);// object
 console.log(f instanceof Foo)// true</code></pre></details>
 
-<h2 id="3-6-原型链中的this"><a href="#3-6-原型链中的this" class="headerlink" title="3.6.原型链中的this"></a>3.6.原型链中的this</h2><p>所有的从原型或者更高级的原型中得到、执行的方法，其中的this在执行时，就指向了当前这个触发事件执行的对象。因此printName和alertName中的this都是f。</p>
-<h2 id="3-7-原型链代码示例"><a href="#3-7-原型链代码示例" class="headerlink" title="3.7.原型链代码示例"></a>3.7.原型链代码示例</h2><details>
+<h2 id="原型链中的this"><a href="#原型链中的this" class="headerlink" title="原型链中的this"></a>原型链中的this</h2><p>所有的从原型或者更高级的原型中得到、执行的方法，其中的this在执行时，就指向了当前这个触发事件执行的对象。因此printName和alertName中的this都是f。</p>
+<h2 id="原型链代码示例"><a href="#原型链代码示例" class="headerlink" title="原型链代码示例"></a>原型链代码示例</h2><details>
 <summary>代码片段</summary>
 
 <pre><code>e.g.1
@@ -512,7 +512,7 @@ $div.on(&apos;click&apos;, function () {
 console.log(&apos;click&apos;)
 })</code></pre></details>
 
-<h1 id="4-this"><a href="#4-this" class="headerlink" title="4. this"></a>4. this</h1><p>this在执行时才能确认指向，定义时无法确认。因为this是执行上下文环境的一部分，而执行上下文需要在代码执行之前确定，而不是定义的时候。</p>
+<h1 id="this"><a href="#this" class="headerlink" title="this"></a>this</h1><p>this在执行时才能确认指向，定义时无法确认。因为this是执行上下文环境的一部分，而执行上下文需要在代码执行之前确定，而不是定义的时候。</p>
 <p>可有以下几个简单方法判断：<br>1.检查 ‘ . ‘ 左边是谁invoke 这个函数. 例如 xiaoming.age();  age函数里面有this, 然后 ‘. ‘ 旁边是xiaoming , 那么this就是指向xiaoming了.这种叫做 Implicit Binding.<br>2.如果点旁边没有,那就检查有没有用到 bind, apply, call 这三种, 有的话就是调用此方法的对象. 这种叫做 explicit binding.<br>3.如果上面两个都没有就检查代码里面有没有用到new 这个keyword, 有的话那就是指向new旁边的函数对象. 这种叫做new binding<br>4.上面三个都没有, 检查是不是有arrow function, 有arrow function的话就是, 那么指向是arrow function的lexical binding 的对象. 就是她的parent. 这种叫做 lexical binding<br>5.全部都没有如果不是strict mode那就是window对象了.. strict就是 error (undefined).</p>
 <p>this执行会有不同，主要集中在这几个场景中：<br>作为构造函数执行，如例1.<br>作为对象属性执行，如例2.<br>作为普通函数执行，如例3.<br>用于call、apply、bind，如例4、5、6.</p>
 <details>
@@ -562,12 +562,12 @@ var fn = function (name, age) {
 }.bind({ x: 300 })
 fn(&apos;hehe&apos;, 20);</code></pre></details>
 
-<h1 id="5-执行上下文"><a href="#5-执行上下文" class="headerlink" title="5. 执行上下文"></a>5. 执行上下文</h1><p>执行上下文用于描述运行Javascript代码的环境。在一段JS脚本（即一个&lt;\script&gt;标签中或一个JS文件中）执行之前，会先创建一个全局执行上下文环境，进行一些准备工作，这里的“准备工作”，就叫做”执行上下文”，也叫执行上下文环境，也叫执行环境。就是先把代码中即将执行的变量定义、函数声明（不是“函数表达式”）都拿出来（函数内部的不算，因为不知道函数何时执行），变量先暂时赋值为undefined，函数则先声明好可使用。这一步做完了，然后再开始正式执行程序。强调，这是在代码执行之前才开始的工作。</p>
+<h1 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h1><p>执行上下文用于描述运行Javascript代码的环境。在一段JS脚本（即一个&lt;\script&gt;标签中或一个JS文件中）执行之前，会先创建一个全局执行上下文环境，进行一些准备工作，这里的“准备工作”，就叫做”执行上下文”，也叫执行上下文环境，也叫执行环境。就是先把代码中即将执行的变量定义、函数声明（不是“函数表达式”）都拿出来（函数内部的不算，因为不知道函数何时执行），变量先暂时赋值为undefined，函数则先声明好可使用。这一步做完了，然后再开始正式执行程序。强调，这是在代码执行之前才开始的工作。</p>
 <p>另外，一个函数在执行之前，会创建一个函数执行上下文环境，跟全局上下文差不多，不过函数执行上线文中会多出this、arguments和函数的参数。</p>
 <p>一个执行上下文的生命周期可以分为两个阶段：创建阶段和执行阶段。</p>
 <p>创建阶段：创建变量对象，建立作用域链，以及确定this的指向。</p>
 <p>执行阶段：创建完成之后，就会开始执行代码，这个时候，会完成变量赋值，函数引用，以及执行其他代码。</p>
-<h1 id="6-作用域"><a href="#6-作用域" class="headerlink" title="6.作用域"></a>6.作用域</h1><h2 id="6-1-作用域"><a href="#6-1-作用域" class="headerlink" title="6.1.作用域"></a>6.1.作用域</h2><p>JS只有全局作用域和函数作用域，无块级作用域。作用域就是一个独立的地盘，让变量不会外泄、暴露出去。</p>
+<h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><h2 id="作用域-1"><a href="#作用域-1" class="headerlink" title="作用域"></a>作用域</h2><p>JS只有全局作用域和函数作用域，无块级作用域。作用域就是一个独立的地盘，让变量不会外泄、暴露出去。</p>
 <p>全局作用域就是最外层的作用域，如果不是在某个函数中定义变量，那么这些变量就都在全局作用域中。这样的坏处就是很容易撞车。这就是为何jquery、zepto等库的源码，所有的代码都会放在(function(){})()中。因为放在里面的所有变量，都不会被外泄和暴露，不会污染到外面，不会对其他的库或者 JS 脚本造成影响。这是函数作用域的一个体现。</p>
 <p>例1中这样的代码块，算不上函数作用域，更别说全局作用域。在代码块里面声明的变量依然能被外面访问到，实质的样子就是例2.</p>
 <details>
@@ -629,7 +629,7 @@ for (let i = 0; i &lt; 10; i++) {
   document.body.appendChild(a)
 }</code></pre></details>
 
-<h2 id="6-2-作用域链"><a href="#6-2-作用域链" class="headerlink" title="6.2.作用域链"></a>6.2.作用域链</h2><p>首先认识一下什么叫做自由变量。例1中，console.log(a)要得到a变量，但是在当前的作用域（指函数作用域）中没有定义a。当前作用域没有定义的变量，这就是自由变量。自由变量如何得到？向父级作用域（函数在哪个作用域中定义的，这个作用域就是函数的父级作用域。函数的父级作用域是函数定义时的父级作用域，不是函数执行时的父级作用域。例1中函数的父级作用域就是全局作用域，因为函数定义在全局作用域中。例2中，F2的父级作用域就是F1的作用域，F1的父级作用域就是全局作用域。）寻找。如果父级作用域也没呢？再一层一层向上寻找，直到找到全局作用域还是没找到，就宣布放弃。这种一层一层的关系，就是作用域链。</p>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>首先认识一下什么叫做自由变量。例1中，console.log(a)要得到a变量，但是在当前的作用域（指函数作用域）中没有定义a。当前作用域没有定义的变量，这就是自由变量。自由变量如何得到？向父级作用域（函数在哪个作用域中定义的，这个作用域就是函数的父级作用域。函数的父级作用域是函数定义时的父级作用域，不是函数执行时的父级作用域。例1中函数的父级作用域就是全局作用域，因为函数定义在全局作用域中。例2中，F2的父级作用域就是F1的作用域，F1的父级作用域就是全局作用域。）寻找。如果父级作用域也没呢？再一层一层向上寻找，直到找到全局作用域还是没找到，就宣布放弃。这种一层一层的关系，就是作用域链。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -656,7 +656,7 @@ function F1() {
 }
 F1()</code></pre></details>
 
-<h1 id="7-闭包"><a href="#7-闭包" class="headerlink" title="7. 闭包"></a>7. 闭包</h1><h2 id="7-1-解释"><a href="#7-1-解释" class="headerlink" title="7.1. 解释"></a>7.1. 解释</h2><p>函数和对其周围状态（lexical environment，词法环境）的引用捆绑在一起构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。可粗略地理解为闭包就是一个内部函数。在JS中，每当函数被创建，就会在函数生成时生成闭包。</p>
+<h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p>函数和对其周围状态（lexical environment，词法环境）的引用捆绑在一起构成闭包（closure）。也就是说，闭包可以让你从内部函数访问外部函数作用域。可粗略地理解为闭包就是一个内部函数。在JS中，每当函数被创建，就会在函数生成时生成闭包。</p>
 <p>下例1中，displayName()函数内没有name变量，所以会向父级作用域找name，然后打印出来（作用域链的知识）。这个词法作用域的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。</p>
 <details>
 <summary>代码片段</summary>
@@ -687,7 +687,7 @@ function makeFunc() {
 var myFunc = makeFunc();
 myFunc();// hehe</code></pre></details>
 
-<h2 id="7-2-应用"><a href="#7-2-应用" class="headerlink" title="7.2. 应用"></a>7.2. 应用</h2><p>最大的应用就是封装变量，收敛权限。见例1，判断某个数字是否出现过，执行isFirstLoad，将返回的函数赋值给变量firstLoad，执行firstLoad，这个函数就会去父级作用域找变量_list。对外界来说不可能修改_list的，这就是收敛权限。</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>最大的应用就是封装变量，收敛权限。见例1，判断某个数字是否出现过，执行isFirstLoad，将返回的函数赋值给变量firstLoad，执行firstLoad，这个函数就会去父级作用域找变量_list。对外界来说不可能修改_list的，这就是收敛权限。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -709,7 +709,7 @@ console.log(firstLoad(10)); // false
 console.log(firstLoad(20)); // true
 console.log(firstLoad(20)); // false</code></pre></details>
 
-<h1 id="8-异步"><a href="#8-异步" class="headerlink" title="8. 异步"></a>8. 异步</h1><h2 id="8-1-解释"><a href="#8-1-解释" class="headerlink" title="8.1. 解释"></a>8.1. 解释</h2><p>简单来讲，不会阻塞后面程序的运行就叫异步，如例1。定时器是异步执行的，输出顺序是100、300、200.执行完100后，并不会等1s再执行200，再执行300，而是执行完100后再执行300，等1s再执行200.</p>
+<h1 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h1><h2 id="解释-1"><a href="#解释-1" class="headerlink" title="解释"></a>解释</h2><p>简单来讲，不会阻塞后面程序的运行就叫异步，如例1。定时器是异步执行的，输出顺序是100、300、200.执行完100后，并不会等1s再执行200，再执行300，而是执行完100后再执行300，等1s再执行200.</p>
 <p>阻塞了就是同步，如例2。执行完100后，用户点击200后，才执行300.</p>
 <p>异步与同步的最大区别就是阻塞与否。</p>
 <details>
@@ -727,7 +727,7 @@ console.log(100)
 alert(200)  // n秒钟之后点击确认
 console.log(300)</code></pre></details>
 
-<h2 id="8-2-应用场景"><a href="#8-2-应用场景" class="headerlink" title="8.2. 应用场景"></a>8.2. 应用场景</h2><p>简单来讲，就是需要等待的场景就需要异步。</p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>简单来讲，就是需要等待的场景就需要异步。</p>
 <p>定时器setTimeout、setInverval，如例1</p>
 <p>网络请求，如ajax、<img>加载，如例2、例3</p>
 <p>事件绑定，如例4</p>
@@ -764,8 +764,8 @@ document.getElementById(&apos;btn1&apos;).addEventListener(&apos;click&apos;, fu
 })
 console.log(&apos;end&apos;)</code></pre></details>
 
-<h1 id="9-单线程"><a href="#9-单线程" class="headerlink" title="9. 单线程"></a>9. 单线程</h1><p>JS 在客户端运行的时候，只有一个线程可运行，因此想要同时干两件事儿是不可能的。这时候就需要异步。单线程碰到异步代码就把异步代码放在一边，按顺序执行完毕后，再执行异步代码。这样就避免了阻塞。如果没有异步，只能同步干。当前面的代码需要花费较长时间时，后面的代码只能干等着。异步和单线程的关系简单来讲就是这样。</p>
-<h1 id="10-JS-Web-API"><a href="#10-JS-Web-API" class="headerlink" title="10. JS-Web-API"></a>10. JS-Web-API</h1><h2 id="10-1-JS基础知识"><a href="#10-1-JS基础知识" class="headerlink" title="10.1. JS基础知识"></a>10.1. JS基础知识</h2><p>一般的“JS基础知识”也叫做“ES基础知识”，其实是最基础的语法知识，它包含的内容：</p>
+<h1 id="单线程"><a href="#单线程" class="headerlink" title="单线程"></a>单线程</h1><p>JS 在客户端运行的时候，只有一个线程可运行，因此想要同时干两件事儿是不可能的。这时候就需要异步。单线程碰到异步代码就把异步代码放在一边，按顺序执行完毕后，再执行异步代码。这样就避免了阻塞。如果没有异步，只能同步干。当前面的代码需要花费较长时间时，后面的代码只能干等着。异步和单线程的关系简单来讲就是这样。</p>
+<h1 id="JS-Web-API"><a href="#JS-Web-API" class="headerlink" title="JS-Web-API"></a>JS-Web-API</h1><h2 id="JS基础知识"><a href="#JS基础知识" class="headerlink" title="JS基础知识"></a>JS基础知识</h2><p>一般的“JS基础知识”也叫做“ES基础知识”，其实是最基础的语法知识，它包含的内容：</p>
 <ul>
 <li>变量类型和计算</li>
 <li>原型和原型链</li>
@@ -775,7 +775,7 @@ console.log(&apos;end&apos;)</code></pre></details>
 </ul>
 <p>这些知识如果从初学者看来，或者只从表面理解，对我们日常工作根本没什么作用。此前讲过，JS基础语法内置的函数有Object、Array、Boolean、Number、String、Function、Date、RegExp、Error，另外还有JSON、Math等常用的对象。但是拿到这些东西之后，貌似什么都干不了，连在网页中打印或者弹出一个提示都不能做。</p>
 <p>但它是一个基础，越用JS你就越能发现。</p>
-<h2 id="10-2-JS-Web-API"><a href="#10-2-JS-Web-API" class="headerlink" title="10.2. JS-Web-API"></a>10.2. JS-Web-API</h2><p>貌似之前的知识什么都干不了，但是浏览器有它的处理方式。</p>
+<h2 id="JS-Web-API-1"><a href="#JS-Web-API-1" class="headerlink" title="JS-Web-API"></a>JS-Web-API</h2><p>貌似之前的知识什么都干不了，但是浏览器有它的处理方式。</p>
 <p>此前的JS基础知识（或者ES基础知识）是依据ECMA-262标准来制定的，浏览器会遵循这个标准，所以在浏览器中使用此前讲过的变量、原型、闭包、异步都是没有问题的。</p>
 <p>在此基础之上，浏览器还得让JS参与更多的事情，即让开发者能通过JS操作网页的各个地方，因此浏览器需要为JS在使用这些基础知识的基础上，再开发新的能力。而这些能力就需要遵循 W3C 的标准。</p>
 <p>W3C 规定了很多内容，例如 html 规则、css 规则、JS 接口的规则，而和 JS 相关的并且面试过程中经常出现的有：</p>
@@ -800,7 +800,7 @@ console.log(&apos;end&apos;)</code></pre></details>
 <p>但是，W3C 没有规定任何语法的东西，什么变量类型、原型、作用域、异步，它都不管。它只管定义一些可以在浏览器中用于 JS 操作页面的 API 和对象。</p>
 <p>最后，回过头来问一句，对于所有的 JS 来说（不是光考虑基础知识层面），它内置的全局变量有哪些？这个问题我们现在可能回答不全面，但是我们至少知道，除了之前讲过的那些，还有window、document这两个，其实还有其他的很多很多个，但是现在都不用管。而且，以后只要是遇到我们没有定义，就直接拿来用的全局变量，那肯定就是浏览器内置的JS全局变量。例如navigator.userAgent</p>
 <p>总结：常说的JS（或浏览器中执行的JS）=JS基础知识（ECMA262标准）+JS-Web-API（W3C标准）</p>
-<h1 id="11-DOM"><a href="#11-DOM" class="headerlink" title="11. DOM"></a>11. DOM</h1><h2 id="11-1-解释"><a href="#11-1-解释" class="headerlink" title="11.1. 解释"></a>11.1. 解释</h2><p>讲DOM先从html讲起，讲html先从XML讲起。XML是一种可扩展的标记语言，所谓可扩展就是它可以描述任何结构化的数据，从数据结构上讲，它是一棵树。参见例1.</p>
+<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="解释-2"><a href="#解释-2" class="headerlink" title="解释"></a>解释</h2><p>讲DOM先从html讲起，讲html先从XML讲起。XML是一种可扩展的标记语言，所谓可扩展就是它可以描述任何结构化的数据，从数据结构上讲，它是一棵树。参见例1.</p>
 <details>
 <summary>代码片段</summary>
 
@@ -838,12 +838,12 @@ console.log(&apos;end&apos;)</code></pre></details>
 <p>我们开发完的html代码会保存到一个文档中（一般以.html或者.htm结尾），文档放在服务器上，浏览器请求服务器，这个文档被返回。因此，最终浏览器拿到的是一个文档而已，文档的内容就是html格式的代码。</p>
 <p>但是浏览器要把这个文档中的html按照标准渲染成一个页面，此时浏览器就需要将这堆代码处理成自己能理解的东西，也得处理成JS能理解的东西，因为还得允许JS修改页面内容。</p>
 <p>所以，DOM就是浏览器把拿到的html代码，结构化成一个浏览器能识别且JS能操作的模型。通俗讲，浏览器把html转变成DOM，html是一棵树，DOM也是一棵树。先从JS着手，即可以粗略地认为DOM就是JS能识别的html结构，一个普通的JS对象或者数组。</p>
-<h2 id="11-2-DOM-节点操作"><a href="#11-2-DOM-节点操作" class="headerlink" title="11.2. DOM 节点操作"></a>11.2. DOM 节点操作</h2><h3 id="11-2-1-获取-DOM-节点"><a href="#11-2-1-获取-DOM-节点" class="headerlink" title="11.2.1. 获取 DOM 节点"></a>11.2.1. 获取 DOM 节点</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;) // 元素
+<h2 id="DOM-节点操作"><a href="#DOM-节点操作" class="headerlink" title="DOM 节点操作"></a>DOM 节点操作</h2><h3 id="获取-DOM-节点"><a href="#获取-DOM-节点" class="headerlink" title="获取 DOM 节点"></a>获取 DOM 节点</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;) // 元素
 var divList = document.getElementsByTagName(&apos;div&apos;)  // 集合
 console.log(divList.length)
 console.log(divList[0])
 var containerList = document.getElementsByClassName(&apos;.container&apos;) // 集合
-var pList = document.querySelectorAll(&apos;p&apos;) // 集合</code></pre><h3 id="11-2-2-prototype"><a href="#11-2-2-prototype" class="headerlink" title="11.2.2. prototype"></a>11.2.2. prototype</h3><p>DOM节点就是一个JS对象，它符合之前讲述的对象的特征————可扩展属性。property 的获取和修改，是直接改变 JS 对象，是对JS对象而言的。</p>
+var pList = document.querySelectorAll(&apos;p&apos;) // 集合</code></pre><h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>DOM节点就是一个JS对象，它符合之前讲述的对象的特征————可扩展属性。property 的获取和修改，是直接改变 JS 对象，是对JS对象而言的。</p>
 <pre><code>var pList = document.querySelectorAll(&apos;p&apos;)
 var p = pList[0]
 console.log(p.style.width)  // 获取样式
@@ -852,25 +852,25 @@ console.log(p.className)  // 获取 class
 p.className = &apos;p1&apos;  // 修改 class
 // 获取 nodeName 和 nodeType
 console.log(p.nodeName)
-console.log(p.nodeType)</code></pre><h3 id="11-2-3-Attribute"><a href="#11-2-3-Attribute" class="headerlink" title="11.2.3. Attribute"></a>11.2.3. Attribute</h3><p>Attibute是修改html标签的属性。与property有很大的区别。</p>
+console.log(p.nodeType)</code></pre><h3 id="Attribute"><a href="#Attribute" class="headerlink" title="Attribute"></a>Attribute</h3><p>Attibute是修改html标签的属性。与property有很大的区别。</p>
 <pre><code>var pList = document.querySelectorAll(&apos;p&apos;)
 var p = pList[0]
 p.getAttribute(&apos;data-name&apos;)
 p.setAttribute(&apos;data-name&apos;, &apos;imooc&apos;)
 p.getAttribute(&apos;style&apos;)
-p.setAttribute(&apos;style&apos;, &apos;font-size:30px;&apos;)</code></pre><h2 id="11-3-DOM-树操作"><a href="#11-3-DOM-树操作" class="headerlink" title="11.3. DOM 树操作"></a>11.3. DOM 树操作</h2><h3 id="11-3-1-新增节点"><a href="#11-3-1-新增节点" class="headerlink" title="11.3.1. 新增节点"></a>11.3.1. 新增节点</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
+p.setAttribute(&apos;style&apos;, &apos;font-size:30px;&apos;)</code></pre><h2 id="DOM-树操作"><a href="#DOM-树操作" class="headerlink" title="DOM 树操作"></a>DOM 树操作</h2><h3 id="新增节点"><a href="#新增节点" class="headerlink" title="新增节点"></a>新增节点</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
 // 添加新节点
 var p1 = document.createElement(&apos;p&apos;)
 p1.innerHTML = &apos;this is p1&apos;
 div1.appendChild(p1) // 添加新创建的元素
 // 移动已有节点
 var p2 = document.getElementById(&apos;p2&apos;)
-div1.appendChild(p2)</code></pre><h3 id="11-3-2-获取父元素"><a href="#11-3-2-获取父元素" class="headerlink" title="11.3.2. 获取父元素"></a>11.3.2. 获取父元素</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
-var parent = div1.parentElement</code></pre><h3 id="11-3-3-获取子元素"><a href="#11-3-3-获取子元素" class="headerlink" title="11.3.3. 获取子元素"></a>11.3.3. 获取子元素</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
-var child = div1.childNodes</code></pre><h3 id="11-3-4-删除节点"><a href="#11-3-4-删除节点" class="headerlink" title="11.3.4. 删除节点"></a>11.3.4. 删除节点</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
+div1.appendChild(p2)</code></pre><h3 id="获取父元素"><a href="#获取父元素" class="headerlink" title="获取父元素"></a>获取父元素</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
+var parent = div1.parentElement</code></pre><h3 id="获取子元素"><a href="#获取子元素" class="headerlink" title="获取子元素"></a>获取子元素</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
+var child = div1.childNodes</code></pre><h3 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h3><pre><code>var div1 = document.getElementById(&apos;div1&apos;)
 var child = div1.childNodes
 div1.removeChild(child[0])</code></pre><p>还有其他操作的API，例如获取前一个节点、获取后一个节点等，但是面试过程中经常考到的就是上面几个。</p>
-<h1 id="12-BOM"><a href="#12-BOM" class="headerlink" title="12. BOM"></a>12. BOM</h1><p>BOM（浏览器对象模型）是浏览器本身的一些信息的设置和获取。包含的对象就是一堆非常简单粗暴的API。常用的几个如下：</p>
+<h1 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h1><p>BOM（浏览器对象模型）是浏览器本身的一些信息的设置和获取。包含的对象就是一堆非常简单粗暴的API。常用的几个如下：</p>
 <ul>
 <li>navigator</li>
 <li>screen</li>
@@ -903,7 +903,7 @@ console.log(location.hash) // #m=100
 history.back()
 history.forward()</code></pre></details>
 
-<h1 id="13-事件"><a href="#13-事件" class="headerlink" title="13. 事件"></a>13. 事件</h1><h2 id="13-1-事件绑定"><a href="#13-1-事件绑定" class="headerlink" title="13.1. 事件绑定"></a>13.1. 事件绑定</h2><h3 id="13-1-1-行内绑定（DOM0级事件处理程序）："><a href="#13-1-1-行内绑定（DOM0级事件处理程序）：" class="headerlink" title="13.1.1. 行内绑定（DOM0级事件处理程序）："></a>13.1.1. 行内绑定（DOM0级事件处理程序）：</h3><p>虽然可以完成需要的功能 但其把结构+样式+行为都绑定在同一个标签中不利于后期维护。</p>
+<h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><h3 id="行内绑定（DOM0级事件处理程序）："><a href="#行内绑定（DOM0级事件处理程序）：" class="headerlink" title="行内绑定（DOM0级事件处理程序）："></a>行内绑定（DOM0级事件处理程序）：</h3><p>虽然可以完成需要的功能 但其把结构+样式+行为都绑定在同一个标签中不利于后期维护。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -915,7 +915,7 @@ history.forward()</code></pre></details>
   }
 &lt;/script&gt;</code></pre></details>
 
-<h3 id="13-1-2-动态绑定（DOM0级事件处理程序）："><a href="#13-1-2-动态绑定（DOM0级事件处理程序）：" class="headerlink" title="13.1.2. 动态绑定（DOM0级事件处理程序）："></a>13.1.2. 动态绑定（DOM0级事件处理程序）：</h3><p>将一个函数赋值给一个事件处理程序属性，简单且具有跨浏览器的优势。</p>
+<h3 id="动态绑定（DOM0级事件处理程序）："><a href="#动态绑定（DOM0级事件处理程序）：" class="headerlink" title="动态绑定（DOM0级事件处理程序）："></a>动态绑定（DOM0级事件处理程序）：</h3><p>将一个函数赋值给一个事件处理程序属性，简单且具有跨浏览器的优势。</p>
 <p>行内绑定与动态绑定的区别：</p>
 <ul>
 <li>行内绑定中，其事件处理中的this指向了全局window对象</li>
@@ -928,7 +928,7 @@ history.forward()</code></pre></details>
 &lt;div id=&quot;box&quot;&gt;hehe&lt;/div&gt;
 document.getElementById(&apos;box&apos;).onclick = function () {console.log(233);}</code></pre></details>
 
-<h3 id="13-1-3-事件监听（DOM2级事件处理程序）："><a href="#13-1-3-事件监听（DOM2级事件处理程序）：" class="headerlink" title="13.1.3. 事件监听（DOM2级事件处理程序）："></a>13.1.3. 事件监听（DOM2级事件处理程序）：</h3><p>和DOM0级事件处理程序的优势：可以添加多个事件处理程序，且DOM0级事件会被覆盖，DOM2级事件不会被覆盖。</p>
+<h3 id="事件监听（DOM2级事件处理程序）："><a href="#事件监听（DOM2级事件处理程序）：" class="headerlink" title="事件监听（DOM2级事件处理程序）："></a>事件监听（DOM2级事件处理程序）：</h3><p>和DOM0级事件处理程序的优势：可以添加多个事件处理程序，且DOM0级事件会被覆盖，DOM2级事件不会被覆盖。</p>
 <p>addEventListener()：添加事件<br>removeEventListener()：删除事件</p>
 <p>接收三个参数：<br>1、要处理的事件名<br>2、作为事件处理程序的函数<br>3、一个布尔值，默认为false。(true为在捕获阶段调用事件处理程序 false为在冒泡阶段调用事件处理程序)</p>
 <details>
@@ -940,7 +940,7 @@ document.getElementById(&apos;box&apos;).addEventListener(&apos;click&apos;, fun
   console.log(111);
 })</code></pre></details>
 
-<h2 id="13-2-事件代理"><a href="#13-2-事件代理" class="headerlink" title="13.2. 事件代理"></a>13.2. 事件代理</h2><p>事件代理，由父元素代理子元素的事件，其实利用的是冒泡机制。<br>自定义一个事件绑定函数。如例1.</p>
+<h2 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h2><p>事件代理，由父元素代理子元素的事件，其实利用的是冒泡机制。<br>自定义一个事件绑定函数。如例1.</p>
 <p>自定义一个事件代理函数。如例2.例2中bindEvent方法对后两个参数做了调整，第三个参数可选。当只有三个参数时，只是普通的绑定事件函数，此时fn为null，将selector赋值给fn即可避免报错，此时，直接执行回调函数即可。当有四个参数时，if (target.matches(selector))判断传入的selector是否与触发事件的元素相等，相等就表示要代理这个元素的事件，然后执行回调函数，利用call改变this指向，并将e作为参数传出去，这样， bindEvent(div1, ‘click’, ‘p’, function (e) {console.log(this.innerHTML)})中的this才能指向触发事件的元素，也就是this才能指向p，并且能使用e参数。</p>
 <details>
 <summary>代码片段</summary>
@@ -1003,7 +1003,7 @@ bindEvent(div1, &apos;click&apos;, function (e) {
   console.log(p.innerHTML)
 })</code></pre></details>
 
-<h1 id="14-AJAX"><a href="#14-AJAX" class="headerlink" title="14. AJAX"></a>14. AJAX</h1><h2 id="14-1-基本"><a href="#14-1-基本" class="headerlink" title="14.1. 基本"></a>14.1. 基本</h2><p>AJAX=Asynchronous JavaScript and XML，异步的js和xml。<br>原生js的AJAX请求。new XMLHttpRequest()创建一个请求实例。</p>
+<h1 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h1><h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>AJAX=Asynchronous JavaScript and XML，异步的js和xml。<br>原生js的AJAX请求。new XMLHttpRequest()创建一个请求实例。</p>
 <p>open方法规定请求的类型、url及是否异步（true为异步，false为同步）。</p>
 <p>send方法将请求发给服务器。可携带一个string类型的参数，可选。当用get方法时，将请求的参数添加在url中，如例1。用post方法时，将请求的参数放在send方法中，如例2.</p>
 <p>当async=true时，要规定在响应处于onreadystatechange事件中的就绪状态时执行的函数。如例1。</p>
@@ -1029,18 +1029,18 @@ xhr.open(&quot;POST&quot;,&quot;/try/ajax/demo_post2.php&quot;,true);
 xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);
 xhr.send(&quot;fname=Henry&amp;lname=Ford&quot;);</code></pre></details>
 
-<h2 id="14-2-xhr-readyState状态码"><a href="#14-2-xhr-readyState状态码" class="headerlink" title="14.2. xhr.readyState状态码"></a>14.2. xhr.readyState状态码</h2><p>0 - (未初始化）还没有调用send()方法<br>1 -（载入）已调用send()方法，正在发送请求<br>2 -（载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 -（交互）正在解析响应内容<br>4 -（完成）响应内容解析完成，可以在客户端调用了</p>
-<h2 id="14-3-status状态码"><a href="#14-3-status状态码" class="headerlink" title="14.3. status状态码"></a>14.3. status状态码</h2><p>http 状态吗有 2xx 3xx 4xx 5xx 这几种，比较常用的有以下几种<br>200 正常<br>404 找不到资源<br>5xx 服务器端出错了</p>
-<h2 id="14-4-responseText"><a href="#14-4-responseText" class="headerlink" title="14.4. responseText"></a>14.4. responseText</h2><p>获得字符串形式的响应数据。</p>
-<h2 id="14-5-responseXML"><a href="#14-5-responseXML" class="headerlink" title="14.5. responseXML"></a>14.5. responseXML</h2><p>获得 XML 形式的响应数据。</p>
-<h1 id="15-跨域"><a href="#15-跨域" class="headerlink" title="15. 跨域"></a>15. 跨域</h1><h2 id="15-1-基本"><a href="#15-1-基本" class="headerlink" title="15.1. 基本"></a>15.1. 基本</h2><p>简单讲，CROS同源策略规定：自己的网站可以随便请求自己服务器的东西，但是因为安全问题，不能随便请求别人服务器的东西。请求别人服务器的东西，就算是跨域请求。同源策略不允许跨域请求。</p>
+<h2 id="xhr-readyState状态码"><a href="#xhr-readyState状态码" class="headerlink" title="xhr.readyState状态码"></a>xhr.readyState状态码</h2><p>0 - (未初始化）还没有调用send()方法<br>1 -（载入）已调用send()方法，正在发送请求<br>2 -（载入完成）send()方法执行完成，已经接收到全部响应内容<br>3 -（交互）正在解析响应内容<br>4 -（完成）响应内容解析完成，可以在客户端调用了</p>
+<h2 id="status状态码"><a href="#status状态码" class="headerlink" title="status状态码"></a>status状态码</h2><p>http 状态吗有 2xx 3xx 4xx 5xx 这几种，比较常用的有以下几种<br>200 正常<br>404 找不到资源<br>5xx 服务器端出错了</p>
+<h2 id="responseText"><a href="#responseText" class="headerlink" title="responseText"></a>responseText</h2><p>获得字符串形式的响应数据。</p>
+<h2 id="responseXML"><a href="#responseXML" class="headerlink" title="responseXML"></a>responseXML</h2><p>获得 XML 形式的响应数据。</p>
+<h1 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h1><h2 id="基本-1"><a href="#基本-1" class="headerlink" title="基本"></a>基本</h2><p>简单讲，CROS同源策略规定：自己的网站可以随便请求自己服务器的东西，但是因为安全问题，不能随便请求别人服务器的东西。请求别人服务器的东西，就算是跨域请求。同源策略不允许跨域请求。</p>
 <p>跨域条件：协议、域名、端口，只要一个不同就算是跨域。<br>一般http的端口是80，https的端口是443.</p>
 <p>但是html中几个标签能逃避过同源策略：<code>&lt;script src=&quot;xxx&quot;&gt;</code>、<code>&lt;img src=&quot;xxxx&quot;/&gt;</code>、<code>&lt;link href=&quot;xxxx&quot;&gt;</code>，标签的src/href可以加载其他域的资源，不受同源策略限制。</p>
 <p>因此，这是三个标签可以做一些特殊的事情。</p>
 <p>img标签可以做打点统计，因为统计方并不一定是同域的，在讲解JS基础知识异步的时候有过代码示例。除了能跨域之外，img标签几乎没有浏览器兼容问题，它是一个非常古老的标签。</p>
 <p>script标签和link标签可以使用CDN，CDN基本都是其他域的链接。</p>
 <p>而且script标签还可以实现JSONP，能获取其他域接口的信息。<br>但是请注意，所有的跨域请求方式，最终都需要信息提供方同意并做出相应的支持和改动才行，否则接收方是无法得到他们的信息的，浏览器是不允许的。</p>
-<h2 id="15-2-JSONP"><a href="#15-2-JSONP" class="headerlink" title="15.2. JSONP"></a>15.2. JSONP</h2><p>首先，要明白一个概念，例如访问<code>http://www.baidu.com/classindex.html</code>的时候，服务器端就不一定有一个classindex.html文件。服务器可以拿到这个请求，然后动态生成一个文件，然后返回。 同理，<code>&lt;script src=&quot;http://www.bdiu.com/api.js&quot;&gt;</code>也不一定加载一个服务器端的静态文件，服务器也可以动态生成文件并返回。<br>例1中，当script标签请求到了api.js时，就会执行api.js的代码，api.js就是调用callback函数并传递参数，这个参数就是本地向外部请求的需要的数据。在本地中callback函数是暴露在全局作用域下的，此时就会输出接收到的data。整个过程就是，在本地中定义函数，在外部中传参并调用函数，函数一旦调用，本地就能接收到传递的参数。<br>JSONP的缺点就是只能发送get请求。</p>
+<h2 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h2><p>首先，要明白一个概念，例如访问<code>http://www.baidu.com/classindex.html</code>的时候，服务器端就不一定有一个classindex.html文件。服务器可以拿到这个请求，然后动态生成一个文件，然后返回。 同理，<code>&lt;script src=&quot;http://www.bdiu.com/api.js&quot;&gt;</code>也不一定加载一个服务器端的静态文件，服务器也可以动态生成文件并返回。<br>例1中，当script标签请求到了api.js时，就会执行api.js的代码，api.js就是调用callback函数并传递参数，这个参数就是本地向外部请求的需要的数据。在本地中callback函数是暴露在全局作用域下的，此时就会输出接收到的data。整个过程就是，在本地中定义函数，在外部中传参并调用函数，函数一旦调用，本地就能接收到传递的参数。<br>JSONP的缺点就是只能发送get请求。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -1055,11 +1055,11 @@ console.log(data) // 这是跨域得到的信息
 &lt;/script&gt;
 &lt;script src=&quot;http://www.bdiu.com/api.js&quot;&gt;</code></pre></details>
 
-<h2 id="15-3-跨域资源共享CORS"><a href="#15-3-跨域资源共享CORS" class="headerlink" title="15.3. 跨域资源共享CORS"></a>15.3. 跨域资源共享CORS</h2><p>通过服务器端设置http header来控制跨域访问权限。</p>
+<h2 id="跨域资源共享CORS"><a href="#跨域资源共享CORS" class="headerlink" title="跨域资源共享CORS"></a>跨域资源共享CORS</h2><p>通过服务器端设置http header来控制跨域访问权限。</p>
 <pre><code>response.setHeader(&quot;Access-Control-Allow-Origin&quot;,&quot;http://www.baidu.com&quot;);//第二个参数填写允许跨域的域名称，不建议直接写&quot;*&quot;
 response.setHeader(&quot;Access-Control-Allow-Headers&quot;,&quot;Content-Type,X-Requested-With&quot;);
 response.setHeader(&quot;Access-Control-Allow-Methods&quot;,&quot;PUT,POST,GET,DELETE,OPTIONS&quot;);
-response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);// 接收跨域的cookie</code></pre><h1 id="16-数组的高阶函数"><a href="#16-数组的高阶函数" class="headerlink" title="16. 数组的高阶函数"></a>16. 数组的高阶函数</h1><h2 id="16-1-forEach"><a href="#16-1-forEach" class="headerlink" title="16.1. forEach()"></a>16.1. forEach()</h2><p>forEach()和map()类似，它也把每个元素依次作用于传入的函数，但不会返回新的数组。forEach()常用于遍历数组，因此，传入的函数不需要返回值。</p>
+response.setHeader(&quot;Access-Control-Allow-Credentials&quot;, &quot;true&quot;);// 接收跨域的cookie</code></pre><h1 id="数组的高阶函数"><a href="#数组的高阶函数" class="headerlink" title="数组的高阶函数"></a>数组的高阶函数</h1><h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h2><p>forEach()和map()类似，它也把每个元素依次作用于传入的函数，但不会返回新的数组。forEach()常用于遍历数组，因此，传入的函数不需要返回值。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -1071,7 +1071,7 @@ Apple
 pear
 orange</code></pre></details>
 
-<h2 id="16-2-map"><a href="#16-2-map" class="headerlink" title="16.2. map()"></a>16.2. map()</h2><p>为数组中的所有元素依次执行方法。返回一个新数组。</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>为数组中的所有元素依次执行方法。返回一个新数组。</p>
 <p>array.map(function(currentValue,index,arr), thisValue)<br>function：必须。函数，数组中的每个元素都会执行这个函数<br>currentValue：必须。当前元素的值<br>index：可选。当前元素的索引值<br>arr：可选。当前元素属于的数组对象<br>thisValue：可选。对象作为该执行回调时使用，传递给函数，用作 “this” 的值。如果省略了 thisValue ，或者传入 null、undefined，那么回调函数的 this 为全局对象。</p>
 <details>
 <summary>代码片段</summary>
@@ -1086,7 +1086,7 @@ console.log(results);
 =&gt;
 1,4,9,16,25,36,49,64,81</code></pre></details>
 
-<h2 id="16-3-reduce"><a href="#16-3-reduce" class="headerlink" title="16.3. reduce()"></a>16.3. reduce()</h2><p>Array的reduce()把一个函数作用在这个Array的[x1, x2, x3…]上，这个函数必须接收两个参数，reduce()把结果继续和序列的下一个元素做累积计算。返回计算结果。</p>
+<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h2><p>Array的reduce()把一个函数作用在这个Array的[x1, x2, x3…]上，这个函数必须接收两个参数，reduce()把结果继续和序列的下一个元素做累积计算。返回计算结果。</p>
 <p>array.reduce(function(total, currentValue, currentIndex, arr), initialValue)<br>function：必须。函数，数组中的每个元素都会执行这个函数<br>total：必需。初始值, 或者计算结束后的返回值。<br>currentValue：必须。当前元素的值<br>currentIndex：可选。当前元素的索引值<br>arr：可选。当前元素属于的数组对象<br>initialValue：可选。传递给函数的初始值</p>
 <details>
 <summary>代码片段</summary>
@@ -1098,7 +1098,7 @@ arr.reduce(function (x, y) {
 });
 =&gt;25</code></pre></details>
 
-<h2 id="16-4-filter"><a href="#16-4-filter" class="headerlink" title="16.4. filter()"></a>16.4. filter()</h2><p>对数组所有元素执行方法，然后根据返回值是true还是false决定保留还是丢弃该元素，就是返回符合条件的元素。</p>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h2><p>对数组所有元素执行方法，然后根据返回值是true还是false决定保留还是丢弃该元素，就是返回符合条件的元素。</p>
 <p>array.filter(function(currentValue,index,arr), thisValue)<br>function：必须。函数，数组中的每个元素都会执行这个函数<br>currentValue：必须。当前元素的值<br>index：可选。当前元素的索引值<br>arr：可选。当前元素属于的数组对象<br>thisValue：可选。对象作为该执行回调时使用，传递给函数，用作 “this” 的值。如果省略了 thisValue ，”this” 的值为 “undefined”</p>
 <details>
 <summary>代码片段</summary>
@@ -1111,7 +1111,7 @@ var r = arr.filter(function (x) {
 =&gt;
 [1, 5, 9, 15]</code></pre></details>
 
-<h2 id="16-5-sort"><a href="#16-5-sort" class="headerlink" title="16.5. sort()"></a>16.5. sort()</h2><p>对数组进行排序操作。默认的排序规则会把40排在5前面，对于这样的需要通过函数作为参数来使用。对数组的引用。请注意，数组在原数组上进行排序，不生成副本，修改原来的数组。</p>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h2><p>对数组进行排序操作。默认的排序规则会把40排在5前面，对于这样的需要通过函数作为参数来使用。对数组的引用。请注意，数组在原数组上进行排序，不生成副本，修改原来的数组。</p>
 <p>array.sort(sortfunction)<br>sortfunction：可选。规定排序顺序。必须是函数。</p>
 <details>
 <summary>代码片段</summary>
@@ -1154,7 +1154,7 @@ arr.sort(function (s1, s2) {
 =&gt;
 [&apos;apple&apos;, &apos;Google&apos;, &apos;Microsoft&apos;]</code></pre></details>
 
-<h2 id="16-6-every"><a href="#16-6-every" class="headerlink" title="16.6. every()"></a>16.6. every()</h2><p>可以判断数组的所有元素是否满足指定条件。如果检测到数组中有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。如果所有元素都满足条件，则返回 true。</p>
+<h2 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h2><p>可以判断数组的所有元素是否满足指定条件。如果检测到数组中有一个元素不满足，则整个表达式返回 false ，且剩余的元素不会再进行检测。如果所有元素都满足条件，则返回 true。</p>
 <p>array.every(function(currentValue,index,arr), thisValue)<br>function：必须。函数，数组中的每个元素都会执行这个函数<br>currentValue：必须。当前元素的值<br>index：可选。当前元素的索引值<br>arr：可选。当前元素属于的数组对象<br>thisValue：可选。对象作为该执行回调时使用，传递给函数，用作 “this” 的值。如果省略了 thisValue ，”this” 的值为 “undefined”</p>
 <details>
 <summary>代码片段</summary>
@@ -1169,7 +1169,7 @@ console.log(arr.every(function (s) {
     return s.toLowerCase() === s;
 })); // false, 因为不是每个元素都全部是小写</code></pre></details>
 
-<h2 id="16-7-find"><a href="#16-7-find" class="headerlink" title="16.7. find()"></a>16.7. find()</h2><p>用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined。不改变原数组。</p>
+<h2 id="find"><a href="#find" class="headerlink" title="find()"></a>find()</h2><p>用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined。不改变原数组。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -1182,7 +1182,7 @@ console.log(arr.find(function (s) {
     return s.toUpperCase() === s;
 })); // undefined, 因为没有全部是大写的元素</code></pre></details>
 
-<h2 id="16-8-findIndex"><a href="#16-8-findIndex" class="headerlink" title="16.8. findIndex()"></a>16.8. findIndex()</h2><p>findIndex()和find()类似，也是查找符合条件的第一个元素，不同之处在于findIndex()会返回这个元素的索引，如果没有找到，返回-1。</p>
+<h2 id="findIndex"><a href="#findIndex" class="headerlink" title="findIndex()"></a>findIndex()</h2><p>findIndex()和find()类似，也是查找符合条件的第一个元素，不同之处在于findIndex()会返回这个元素的索引，如果没有找到，返回-1。</p>
 <details>
 <summary>代码片段</summary>
 
@@ -1194,7 +1194,6 @@ console.log(arr.findIndex(function (s) {
 console.log(arr.findIndex(function (s) {
     return s.toUpperCase() === s;
 })); // -1</code></pre></details>
-
 
       
     </div>
