@@ -12,15 +12,15 @@
 <meta property="og:site_name" content="LifeNobody">
 <meta property="og:description" content="1.Vue项目目录介绍build文件夹：构建脚本目录     build.js:生产环境构建脚本     check-version.js:版本检查（node、npm）     logo.png:logo图片     util.js:构建相关工具方法     vue-loader.conf.js:css加载器配置     webpack.base.conf.js:webpack基础配置     w">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/.com//MVP.jpeg">
-<meta property="og:image" content="http://yoursite.com/.com//07/01/Vue%E5%9F%BA%E7%A1%80/MVP.jpeg">
+<meta property="og:image" content="http://yoursite.com/.com//MVP.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/Vue%E5%9F%BA%E7%A1%80/MVP.png">
 <meta property="article:published_time" content="2020-07-01T06:22:39.000Z">
-<meta property="article:modified_time" content="2020-07-05T06:43:13.787Z">
+<meta property="article:modified_time" content="2020-07-05T08:32:56.814Z">
 <meta property="article:author" content="冯海争">
 <meta property="article:tag" content="Vue">
 <meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/.com//MVP.jpeg">
+<meta name="twitter:image" content="http://yoursite.com/.com//MVP.png">
   
   <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
   <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
@@ -110,8 +110,8 @@ index.html:index.html模板
 package.json:npm包配置文件，定义项目的npm脚本、依赖包等
 package-lock.json:记录依赖包的依赖版本号
 README:项目的说明文档，markdown格式</code></pre><h1 id="2-MVP模式与MVVM模式"><a href="#2-MVP模式与MVVM模式" class="headerlink" title="2.MVP模式与MVVM模式"></a>2.MVP模式与MVVM模式</h1><p>Model-View-Presenter，Model模型处理数据，View视图处理显示数据，Presenter控制器处理业务逻辑。在MVP中View并不直接使用Model，它们之间的通信是通过Presenter来进行的，所有的交互都发生在Presenter内部。</p>
-<p><img src="/.com//MVP.jpeg" alt="MVP模式"></p>
-<img src="/.com//07/01/Vue%E5%9F%BA%E7%A1%80/MVP.jpeg" class title="MVP模式">
+<p><img src="/.com//MVP.png" alt="MVP模式"></p>
+<!-- <img src="/2020/07/01/Vue%E5%9F%BA%E7%A1%80/MVP.png" class="" title="MVP模式"> -->
 
 <p>图MVP模式</p>
 <p>例1是个典型的MVP模式，此处由于数据处理极少，Model的作用不大，但是就一般而言，View与Model的交互要通过Presenter，Presenter是整个模式的核心。View发起一个事件，Presenter执行事件，要么修改Model处理数据，要么修改View处理显示。可以很明显地看到有很多的代码是操作DOM的，通过操作DOM来控制View。</p>
@@ -148,8 +148,10 @@ README:项目的说明文档，markdown格式</code></pre><h1 id="2-MVP模式与
   &lt;/script&gt;
 &lt;/body&gt;</code></pre></details>
 
-<p>Model-View-ViewModel。它本质上就是MVC的改进版。MVVM就是将其中的View的状态和行为抽象化，将视图和业务逻辑分开。Model模型是指代表真实状态内容的领域模型（面向对象），或指代表内容的数据访问层（以数据为中心）。View视图是用户在屏幕上看到的结构、布局和外观。ViewModel视图模型是暴露公共属性和命令的视图的抽象。<br>MVVM没有MVC模式的Controller，也没有MVP模式的Presenter，只有一个ViewModel。ViewModel在View和Model之间进行通信。ViewModel可以取出Model的数据同时处理View中需要显示数据的部分。在这种模式下，Model成为核心，View和Model没有直接的联系，而是通过ViewModel进行交互，Model和ViewModel之间的交互是双向的，因此View数据的变化会同步到Model中，而Model数据的变化也会立即反应到View上。</p>
-<p>图MVVM模式<br>例2是个MVVM模式，基本没有操作DOM的代码，这就节省了DOM操作。主要依靠数据的改变而改变View。当改变数据时，Vue会监听数据的变化，并自动改变View。</p>
+<p>Model-View-ViewModel。它本质上就是MVC的改进版。MVVM就是将其中的View的状态和行为抽象化，将视图和业务逻辑分开。Model模型是指代表真实状态内容的领域模型（面向对象），或指代表内容的数据访问层（以数据为中心）。View视图是用户在屏幕上看到的结构、布局和外观。ViewModel视图模型是暴露公共属性和命令的视图的抽象。</p>
+<p>MVVM没有MVC模式的Controller，也没有MVP模式的Presenter，只有一个ViewModel。ViewModel在View和Model之间进行通信。ViewModel可以取出Model的数据同时处理View中需要显示数据的部分。在这种模式下，Model成为核心，View和Model没有直接的联系，而是通过ViewModel进行交互，Model和ViewModel之间的交互是双向的，因此View数据的变化会同步到Model中，而Model数据的变化也会立即反应到View上。</p>
+<p>图MVVM模式</p>
+<p>例2是个MVVM模式，基本没有操作DOM的代码，这就节省了DOM操作。主要依靠数据的改变而改变View。当改变数据时，Vue会监听数据的变化，并自动改变View。</p>
 <details>
 <summary>代码片段</summary>
 
