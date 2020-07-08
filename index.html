@@ -160,17 +160,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -220,20 +220,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -274,6 +274,96 @@
 
         <div class="content index posts-expand">
           
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lifenobody.github.io/2020/07/08/%E6%B5%8F%E8%A7%88%E5%99%A8-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9URL%E5%81%9A%E4%BA%86%E5%95%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="LifeNobody">
+      <meta itemprop="description" content="博客，挖坑常在~~~">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LifeNobody">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/08/%E6%B5%8F%E8%A7%88%E5%99%A8-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9URL%E5%81%9A%E4%BA%86%E5%95%A5/" class="post-title-link" itemprop="url">[浏览器]浏览器对URL做了啥</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-08 15:51:43 / 修改时间：22:32:21" itemprop="dateCreated datePublished" datetime="2020-07-08T15:51:43+08:00">2020-07-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">浏览器</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h1><h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>进程是操作系统进行资源分配和调度的基本单元，可以申请和拥有计算机资源，进程是程序的基本执行实体。</p>
+<p>线程是操作系统能够进行运算调度的最小单位，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p>
+<p>启动程序时会创建一个进程来执行任务代码，并为该进程分配内存空间，该应用程序的转台都保存在该内存空间里，当应用关闭时，该内存空间会被回收，进程就可以启动更多的进程来执行任务。<br>每个进程分配的内存空间时独立的，如果两个进程间需要传递数据，就要通过进程间通信管道IPC来传递。很多应用程序都采用多进程结构，以避免某一个进程卡死影响到其他进程，也就不会影响到整个应用程序。</p>
+<p>进程可以将任务分成更多细小的任务，然后创建多个线程并行执行不同的任务。同一进程下的线程之间可以直接通信共享数据。</p>
+<h2 id="浏览器与进程"><a href="#浏览器与进程" class="headerlink" title="浏览器与进程"></a>浏览器与进程</h2><p>早期的浏览器是单进程浏览器。一个进程中有页面线程负责页面渲染和展示、JS线程执行JS代码以及其他各种线程。这暴露出很多问题：</p>
+<p>1.不稳定：一个线程卡死会导致整个进程出问题<br>2.不安全：浏览器之间是可以访问数据的，JS线程就有可能随意访问浏览器进程的数据<br>3.不流畅：一个进程需要负责许多事情，运行效率不高</p>
+<p>现代浏览器都采用多进程结构，大致有：</p>
+<p>1.浏览器进程：控制除浏览器标签页面之外的用户界面，包括前进后退按钮、地址栏、标签栏，并负责与浏览器其他进程协调工作。<br>2.GPU进程：负责整个浏览器界面的渲染。<br>3.插件进程：负责控制网站使用的所有插件，如flash。并不是指应用市场里安装的扩展。<br>4.网络进程：发起接收网络请求。<br>5.缓存进程：缓存页面数据。<br>6.渲染器进程：控制显示tab标签内的所有内容。浏览器默认会为每个标签页创建进程。关于此，chrome有多个进程模型，Process-per-site-instance（不同站点和同一站点的不同页面都会创建新的进程）、Process-per-site（同一站点使用同一进程）、Process-per-tab（一个tab里的所有站点使用一个进程）、SingleProcess（浏览器引擎和渲染引擎共用一个进程）。</p>
+<h2 id="浏览器与URL"><a href="#浏览器与URL" class="headerlink" title="浏览器与URL"></a>浏览器与URL</h2><p>以chrome为例。</p>
+<p>当在地址栏输入网址时，浏览器进程的UI线程会捕捉地址栏内输入的内容，如果输入的不是网址而是一串关键词、短语短句，浏览器就会使用默认配置的搜索引擎来查询这些关键词、短语短句。</p>
+<p>如果输入的是网址，UI线程会启动网络线程来请求DNS进行域名解析，接着连接服务器获取数据。当网络线程获取到数据后，会利用SafeBrowsing（Safebrowsing是谷歌内部的一套站点安全系统，通过检测该站点的数据来判断是否安全，比如查看该IP是否在谷歌的黑名单内。）来检查站点是不是恶意站点，是的话就会展示警告页面，告诉用户此站点有安全问题，试图阻止用户访问，用户也能强行访问。不是的话就继续准备数据，完成准备后，网络线程会启动UI线程，UI线程会创建一个渲染器进程来渲染页面，浏览器进程会通过IPC管道将数据传递给渲染器进程，开始渲染。</p>
+<p>渲染器主线程解析HTML结构，构建DOM树。HTML首先通过tokeniser词法分析器标记化（词法分析器将输入的HTML内容解析成各种标记），根据识别后的标记构造DOM树（在DOM树构造过程中会创建document对象，然后以document为根节点的DOM树会不断进行修改，向其中添加各种元素，最终构造完整的DOM树）。css、图片这种资源直接请求网络下载或从缓存中加载，并不影响解析（因为这些并不影响DOM树的生成），而解析遇到script标签就会停止HTML解析，转而去加载并执行JS，这就阻塞了后面的解析。为什么不会跳过script标签等解析完HTML再加载执行JS呢？因为浏览器不知道执行JS会不会改变当前的HTML结构，如document.wirte()。如果会改变，那么之前的解析就没意义了。所以script标签要放在合适的位置，或使用async、defer来异步加载执行JS。在解析完HTML后就会得到一个完整的DOM树。</p>
+<p>接下来主线程解析CSS，计算、解析每个DOM节点样式，即使没有提供自定义样式，浏览器也会有自己默认的样式表，不同的浏览器有些许不同。</p>
+<p>在知道DOM节点和每个节点的样式后，接下来就开始布局，计算每个节点的位置坐标。主线程通过遍历DOM和计算好的样式来生成layout（布局）树，layout树的每个节点都计算好了样式和位置坐标。但DOM树的节点和layout树的节点并不是一一对应的，如有的DOM节点有display:none属性，这就不会显示在layout树上，如伪类中content的值只会显示在layout树中，并不会显示在DOM树中，因为DOM由HTML解析得到，与样式无关，layout树是根据DOM树和计算好的样式生成的，layout树是和屏幕上展示的节点一一对应的。</p>
+<p>接下来就是绘制顺序。主线程遍历layout树创建一个绘制记录表，来记录绘制顺序。</p>
+<p>接下来就是栅格化，按绘制记录表记录的绘制顺序把信息转化成像素点显示在屏幕上。chrome早期只栅格化用户可视区的内容，往下滚动时再即时栅格化下一部分的内容，这种方法的问题很明显就是延迟显示。现在的chrome采用更复杂的栅格化方法–合成。就是将页面的各个部分分成多个图层，分别对其进行栅格化，并在合成器线程中单独进行页面合成，最终组合成一帧显示出来。详细见下。</p>
+<p>主线程遍历layout树生成layer（图层）树。当layer树生成完毕和确定绘制顺序后，主线程将这些信息传递给合成器线程，合成器线程将每个图层栅格化，由于一层可能占满整个页面，合成器线程便将这些图层切分为许多图块，再发送给栅格线程，栅格线程栅格化每个图块，并将图块存在GPU内存中，当图块栅格化完成后，合成器线程将收集称为“draw quads”的图块信息，这些信息记录了图块在内存中的位置和在页面的位置。根据这些信息，合成器线程生成一个合成器帧，然后合成器帧通过IPC管道传给浏览器进程，浏览器进程再将合成器帧传给GPU，GPU再渲染到屏幕上，就能看见了。</p>
+<h2 id="重排与重绘"><a href="#重排与重绘" class="headerlink" title="重排与重绘"></a>重排与重绘</h2><p>改变元素大小位置时浏览器会重新进行样式计算、布局、绘制等一系列流程，这种行为就是重排。</p>
+<p>改变元素样式时不会触发布局，但还是会进行样式计算、绘制等，这种行为就是重绘。</p>
+<h2 id="重排重绘与JS"><a href="#重排重绘与JS" class="headerlink" title="重排重绘与JS"></a>重排重绘与JS</h2><p>重排重绘都会占用主线程，运行JS也会占用主线程，这就出现了抢占执行时间的问题。</p>
+<p>当主线程渲染完一帧后还有多余的时间，那么JS就会在这个时间内使用主线程，然而JS执行不一定很快，当该渲染下一帧而JS没有归还主线程时，渲染就会出问题，导致页面卡顿。</p>
+<p>解决手段之一就是使用requestAnimationFrame()，这个方法会在每一帧被调用。调用该方法可以把JS运行任务切分成许多任务块，分配到每一帧的多余时间内执行，时间用完就暂停执行JS，归还主线程，在绘制下一帧时主线程就能按时渲染。</p>
+<p>解决手段之二就是用transform做的动画是直接在合成器线程和栅格线程中运行，并不会占用主线程，也就不会和JS抢占主线程，不受JS执行的影响。另外，用transform做的动画无需经过样式计算、绘制、布局等操作，节省了很多运算时间。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
