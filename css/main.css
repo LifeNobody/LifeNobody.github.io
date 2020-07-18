@@ -211,7 +211,6 @@ body {
   height: 100%;
 }
 body {
-  background: var(--body-bg-color);
   color: var(--text-color);
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
@@ -262,7 +261,7 @@ span.exturl {
 a:hover,
 span.exturl:hover {
   border-bottom-color: var(--link-hover-color);
-  color: var(--link-hover-color);
+  color: rgba(255,255,255,0.5);
 }
 iframe,
 img,
@@ -332,7 +331,6 @@ td {
   border-bottom-width: 1px;
 }
 .btn {
-  background: var(--btn-default-bg);
   border: 2px solid var(--btn-default-border-color);
   border-radius: 2px;
   color: var(--btn-default-color);
@@ -1280,6 +1278,13 @@ pre code {
   min-height: 100%;
   position: relative;
 }
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../../../images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
 .headband {
   background: #222;
   height: 3px;
@@ -1479,6 +1484,7 @@ pre code {
   color: #999;
   padding: 20px 10px;
   text-align: center;
+  background-color: rgba(0,0,0,0.5);
 }
 .cc-license {
   margin-top: 10px;
@@ -1980,6 +1986,7 @@ pre code {
 .use-motion .pagination,
 .use-motion .comments {
   visibility: hidden;
+  background-color: rgba(255,255,255,0.7);
 }
 .use-motion .post-header {
   visibility: hidden;
@@ -2716,7 +2723,7 @@ ul.breadcrumb li + li:last-child {
   align-self: stretch;
 }
 .header-inner {
-  background: var(--content-bg-color);
+  background-color: rgba(255,255,255,0.5);
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   width: 240px;
@@ -2780,7 +2787,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 .site-brand-container {
-  background: #222;
+  background-color: rgba(0,0,0,0.5);
 }
 @media (max-width: 991px) {
   .site-brand-container {
@@ -2889,7 +2896,7 @@ ul.breadcrumb li + li:last-child {
   display: none;
 }
 .sidebar-inner {
-  background: transparent;
+  background: rgba(0,0,0,0.5);
   border-radius: initial;
   box-sizing: border-box;
   color: #fff;
