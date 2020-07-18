@@ -1284,6 +1284,7 @@ pre code {
   height: 100%;
   background: url("../../../images/bg.jpg") center no-repeat;
   background-size: cover;
+  z-index: -2;
 }
 .headband {
   background: #222;
