@@ -252,7 +252,7 @@ p {
 a,
 span.exturl {
   border-bottom: 1px solid #999;
-  color: var(--link-color);
+  color: rgba(255,255,255,0.5);
   outline: 0;
   text-decoration: none;
   overflow-wrap: break-word;
@@ -1425,7 +1425,7 @@ pre code {
 .menu-item span.exturl:hover,
 .menu-item a.menu-item-active,
 .menu-item span.exturl.menu-item-active {
-  background: var(--menu-item-bg-color);
+  background-color: rgba(0,0,0,0.5);
 }
 .menu-item .fa,
 .menu-item .fab,
